@@ -1,0 +1,7 @@
+.mainRegion {
+  padding: 20px;
+}
+
+[data-action] {
+  cursor: pointer;
+}

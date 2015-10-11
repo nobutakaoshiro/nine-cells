@@ -1,0 +1,43 @@
+.nineCell__ownerName {
+  display: inline-block;
+  color: #999;
+  font-size: 10px;
+}
+
+.nineCell__table {
+  max-width: 700px;
+}
+
+.nineCell__table thead th {
+  text-align: center;
+}
+
+.nineCell__table .labelCell {
+  width: 100px;
+  font-weight: bold;
+  background-color: #F9FAFB;
+}
+
+.nineCell__table .dataCell {
+  vertical-align: top;
+}
+
+.nineCell__table tbody tr {
+  height: 160px;
+}
+
+.nineCell__table td {
+  width: 200px;
+  max-width: 200px;
+}
+
+.nineCell__table .editable-text {
+  width: 100%;
+  height: 140px;
+  display: inline-block;
+}
+
+.nineCell__table .text-area-edit {
+  width: 100%;
+  height: 136px;
+}

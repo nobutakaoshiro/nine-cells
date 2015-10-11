@@ -1,0 +1,24 @@
+.sidebar__avatar-container {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  padding-top: 65px;
+}
+
+.sidebar__avatar-centered {
+  margin: auto;
+}
+
+.sidebar__list {
+  padding-left: 32px !important;
+  margin-top: 0 !important;
+}
+
+.sidebar__list-item {
+  list-style-position: outside;
+}
+
+.sidebar__list-item-link {
+  padding: 6px 8px 6px 0 !important;
+  line-height: 130% !important;
+}

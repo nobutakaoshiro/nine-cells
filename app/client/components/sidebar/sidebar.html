@@ -1,0 +1,31 @@
+<template name="sidebar">
+  <div class="ui visible sidebar inverted vertical menu left" style="background-color: #3028AF;">
+    <div class="borderless item" style="z-index: 100;">{{> loginButtons}}</div>
+
+    <div class="ui divider"></div>
+
+    <a href="/" class="borderless header item">DOCUMENTS</a>
+
+    {{#if currentUser}}
+      <div class="borderless item" style="padding-bottom: 0;">
+        <button class="ui inverted small button" data-action="create">
+          <i class="icon add"></i>
+          Create
+        </button>
+      </div>
+    {{/if}}
+
+    <ul class="borderless item sidebar__list">
+    {{#each nineCells}}
+      <li class="sidebar__list-item" data-ui="appear-target">
+        <a href="{{pathFor 'nineCell' id=_id}}" class="borderless item sidebar__list-item-link">
+        {{name}}
+        {{#if private}}
+          <i class="lock icon"></i>
+        {{/if}}
+        </a>
+      </li>
+    {{/each}}
+    </ul>
+  </div>
+</template>

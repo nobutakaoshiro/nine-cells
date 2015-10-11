@@ -1,0 +1,55 @@
+<template name="nineCell">
+  <h2 class="nineCell__name">
+    {{> editableText context=nineCell collection="nineCells" field="name" placeholder="Title" substitute='<i class="ui edit icon"></i>'}}
+    {{#if isPrivate}}<i class="lock icon"></i>{{/if}}
+    <div class="nineCell__ownerName">{{#with nineCell}}by {{#with owner}}{{name}}{{/with}}{{/with}}</div>
+  </h2>
+  <h3 class="nineCell__description">
+    {{> editableText context=nineCell collection="nineCells" field="description" placeholder="Description" options=optionsHelper}}
+  </h3>
+
+  {{#if isOwner}}
+    <div class="ui checkbox">
+      <input type="checkbox" name="private" id="privateCheckbox" data-action="toggle-private" checked="{{privateCheckboxValue}}" />
+      <label for="privateCheckbox">Private</label>
+    </div>
+  {{/if}}
+
+  <table class="ui celled table nineCell__table">
+    <thead>
+      <tr>
+        <th>&nbsp;</th>
+        <th>WHO</th>
+        <th>WHAT</th>
+        <th>HOW</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td class="labelCell">VALUE</td>
+        <td class="dataCell">{{> editableText context=nineCell collection="nineCells" field="valueWho" options=optionsHelper}}</td>
+        <td class="dataCell">{{> editableText context=nineCell collection="nineCells" field="valueWhat" options=optionsHelper}}</td>
+        <td class="dataCell">{{> editableText context=nineCell collection="nineCells" field="valueHow" options=optionsHelper}}</td>
+      </tr>
+      <tr>
+        <td class="labelCell">PROFIT</td>
+        <td class="dataCell">{{> editableText context=nineCell collection="nineCells" field="benefitWho" options=optionsHelper}}</td>
+        <td class="dataCell">{{> editableText context=nineCell collection="nineCells" field="benefitWhat" options=optionsHelper}}</td>
+        <td class="dataCell">{{> editableText context=nineCell collection="nineCells" field="benefitHow" options=optionsHelper}}</td>
+      </tr>
+      <tr>
+        <td class="labelCell">PROCESS</td>
+        <td class="dataCell">{{> editableText context=nineCell collection="nineCells" field="processWho" options=optionsHelper}}</td>
+        <td class="dataCell">{{> editableText context=nineCell collection="nineCells" field="processWhat" options=optionsHelper}}</td>
+        <td class="dataCell">{{> editableText context=nineCell collection="nineCells" field="processHow" options=optionsHelper}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+  {{#if currentUser}}
+    {{#with nineCell}}
+      <button class="ui inverted red button" data-action="delete" data-id="{{_id}}">Delete</button>
+    {{/with}}
+  {{/if}}
+</template>
