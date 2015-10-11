@@ -29,17 +29,17 @@ Schemas.NindeCell = new SimpleSchema({
     defaultValue: "n/a",
     optional: true
   },
-  'benefitWho': {
+  'profitWho': {
     type: String,
     defaultValue: "n/a",
     optional: true
   },
-  'benefitWhat': {
+  'profitWhat': {
     type: String,
     defaultValue: "n/a",
     optional: true
   },
-  'benefitHow': {
+  'profitHow': {
     type: String,
     defaultValue: "n/a",
     optional: true
